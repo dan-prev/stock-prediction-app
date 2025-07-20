@@ -1,1 +1,7 @@
-# stock-prediction-app
+This project is an interactive web application built with Streamlit that forecasts stock prices using a variety of machine learning models and optimization techniques. Users can select a stock ticker and date range, then choose from models like Random Forest, XGBoost, ElasticNet, MLPRegressor, and others. The app supports multiple hyperparameter tuning strategies, including Genetic Algorithm, Grid Search, Random Search, and Bayesian Optimization via Optuna.
+
+Once a user runs a prediction, the app fetches historical price data, cleans and processes it, and engineers financial features such as moving averages, RSI, MACD, and Bollinger Bands. The data is then split into training and testing sets, scaled if necessary, and passed into the chosen model and optimizer. The best-performing model is evaluated using metrics like MSE and visualized through actual vs. predicted price plots.
+
+Beyond prediction, the app includes a backtesting engine that simulates a simple trading strategy based on the model’s output. It tracks the performance of a portfolio using the strategy compared to a Buy & Hold benchmark. Users are shown final capital, risk metrics, and even trade-level details — all of which can be downloaded as CSV files for further analysis.
+
+The code is modular, with components for data fetching, preprocessing, feature engineering, model selection, evaluation, and visualization. While the app does not include raw stock data, it’s designed to be easily connected to any API or data source via the DataFetcher module. It’s a flexible, user-friendly tool for experimenting with financial time series prediction and model performance evaluation.
